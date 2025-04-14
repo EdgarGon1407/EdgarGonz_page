@@ -1,1 +1,160 @@
-<h1>Github pages</h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mi GitHub Page</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #f0f4f8, #d9e2ec);
+      color: #333;
+    }
+
+    header {
+      background-color: #24292e;
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #24292e;
+      border-left: 5px solid #0366d6;
+      padding-left: 10px;
+    }
+
+    .card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-bottom: 1.5rem;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .card a {
+      text-decoration: none;
+      color: #0366d6;
+      font-weight: bold;
+    }
+
+    .card a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background-color: #f7fafc;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    .perfil {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .perfil img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid #0366d6;
+    }
+
+    .perfil-info p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 600px) {
+      .perfil {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>¡Hola! Soy [Tu Nombre]</h1>
+    <p>Desarrollador | Estudiante | Apasionado por la tecnología</p>
+  </header>
+
+  <div class="container">
+
+    <section class="perfil">
+      <img src="https://avatars.githubusercontent.com/u/0000000?v=4" alt="Foto de perfil" />
+      <div class="perfil-info">
+        <h2>Sobre mí</h2>
+        <p>¡Hola! Soy un apasionado por el desarrollo web y la tecnología. Me gusta crear proyectos útiles, explorar nuevas herramientas y compartir lo que aprendo.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Proyectos destacados</h2>
+
+      <div class="card">
+        <h3>📝 EduTask – Gestor de Tareas Escolares</h3>
+        <p>Una aplicación web para organizar tareas escolares, diseñada para estudiantes y profesores.</p>
+        <a href="https://edgargon1407.github.io/EduTask/" target="_blank">Ver proyecto</a>
+      </div>
+
+      <div class="card">
+        <h3>🌐 Portafolio Grupal</h3>
+        <p>Página colaborativa con mi equipo de investigación. Incluye nuestros perfiles y aportes.</p>
+        <a href="https://reedmamani.github.io/Portada-Grupal/" target="_blank">Ver portafolio</a>
+      </div>
+
+    </section>
+
+    <section>
+      <h2>Contacto</h2>
+      <p>📧 tunombre@email.com</p>
+      <p>🐙 <a href="https://github.com/edgargon1407" target="_blank">Mi perfil en GitHub</a></p>
+    </section>
+
+  </div>
+
+  <footer>
+    &copy; 2025 [Tu Nombre] – Página creada con HTML y mucho ❤️
+  </footer>
+
+</body>
+</html>
+
