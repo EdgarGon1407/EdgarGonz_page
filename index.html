@@ -3,27 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mi GitHub Page</title>
+  <title>Edgar Gonzales | Portafolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+      scroll-behavior: smooth;
     }
 
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #000;
-      color: #f1f1f1;
-      overflow-x: hidden;
+      background-color: #0d1117;
+      color: #c9d1d9;
+      line-height: 1.6;
     }
 
     header {
-      background-color: #24292e;
-      color: white;
+      background-color: #161b22;
+      color: #fff;
       padding: 3rem 1rem;
       text-align: center;
-      animation: fadeInUp 1s ease-in-out;
     }
 
     header h1 {
@@ -33,45 +34,62 @@
 
     header p {
       font-size: 1.2rem;
+      color: #8b949e;
+    }
+
+    nav {
+      background-color: #161b22;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid #30363d;
+    }
+
+    nav a {
+      color: #58a6ff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
     }
 
     .container {
-      max-width: 1000px;
+      max-width: 960px;
       margin: 2rem auto;
-      padding: 1rem;
-    }
-
-    section {
-      margin-bottom: 3rem;
-      animation: fadeInUp 1s ease-in-out;
+      padding: 0 1rem;
     }
 
     h2 {
       font-size: 2rem;
       margin-bottom: 1rem;
-      color: #ffffff;
-      border-left: 5px solid #0366d6;
+      border-left: 5px solid #58a6ff;
       padding-left: 10px;
     }
 
     .card {
-      background: #1a1a1a;
-      color: #f1f1f1;
+      background-color: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 10px;
       padding: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(255,255,255,0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
       margin-bottom: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(255,255,255,0.15);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
     }
 
     .card a {
-      text-decoration: none;
       color: #58a6ff;
+      text-decoration: none;
       font-weight: bold;
     }
 
@@ -79,37 +97,52 @@
       text-decoration: underline;
     }
 
-    footer {
-      text-align: center;
-      padding: 1.5rem;
-      background-color: #111;
-      font-size: 0.9rem;
-      color: #aaa;
-      animation: fadeInUp 1s ease-in-out;
-    }
-
     .perfil {
       display: flex;
       align-items: center;
       gap: 1.5rem;
-      background-color: #1e1e1e;
-      border: 2px solid #58a6ff;
-      border-radius: 12px;
-      padding: 1.5rem;
-      box-shadow: 0 0 10px rgba(88, 166, 255, 0.3);
+      flex-wrap: wrap;
     }
 
     .perfil img {
-      width: 120px;
-      height: 120px;
+      width: 130px;
+      height: 130px;
       border-radius: 50%;
-      border: 3px solid #0366d6;
+      border: 3px solid #58a6ff;
     }
 
-    .perfil-info p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      color: #ccc;
+    .perfil-info {
+      flex: 1;
+    }
+
+    .fade-scroll {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease-out;
+    }
+
+    .fade-scroll.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: #161b22;
+      color: #8b949e;
+      margin-top: 3rem;
+    }
+
+    .social-icons a {
+      margin: 0 0.5rem;
+      color: #c9d1d9;
+      font-size: 1.3rem;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #58a6ff;
     }
 
     @media (max-width: 600px) {
@@ -118,65 +151,83 @@
         text-align: center;
       }
     }
-
-    /* Animación fadeInUp */
-    @keyframes fadeInUp {
-      0% {
-        opacity: 0;
-        transform: translateY(40px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>¡Hola! Soy Edgar Alfredo Gonzales Huisa</h1>
-    <p>Desarrollador | Estudiante de Ing. de Sistemas | Apasionado por la tecnología</p>
+    <h1>Edgar Alfredo Gonzales Huisa</h1>
+    <p>Desarrollador Web | Estudiante de Ingeniería de Sistemas</p>
   </header>
+
+  <nav>
+    <a href="#sobremi">Sobre mí</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
 
   <div class="container">
 
-    <section class="perfil">
-      <img src="https://avatars.githubusercontent.com/u/204965646?v=4" />
+    <section class="perfil fade-scroll" id="sobremi">
+      <img src="https://avatars.githubusercontent.com/u/204965646?v=4" alt="Foto de perfil">
       <div class="perfil-info">
         <h2>Sobre mí</h2>
-        <p>¡Hola! Soy un apasionado por el desarrollo web y la tecnología. Me gusta crear proyectos útiles, explorar nuevas herramientas y compartir lo que aprendo.</p>
+        <p>Soy un apasionado del desarrollo web y la tecnología. Me encanta crear soluciones útiles, explorar nuevas herramientas y trabajar en equipo para hacer realidad buenas ideas.</p>
       </div>
     </section>
 
-    <section>
+    <section class="fade-scroll" id="proyectos">
       <h2>Proyectos destacados</h2>
 
       <div class="card">
-        <h3>📝 EduSofw – Gestor de Tareas Escolares</h3>
-        <p>Una aplicación web para organizar tareas escolares, diseñada para estudiantes y profesores.</p>
+        <h3>📝 EduTask – Gestor de Tareas Escolares</h3>
+        <p>Una aplicación web que ayuda a estudiantes y profesores a organizar tareas de manera efectiva.</p>
         <a href="https://edgargon1407.github.io/EduTask/" target="_blank">Ver proyecto</a>
       </div>
 
       <div class="card">
         <h3>🌐 Portafolio Grupal</h3>
-        <p>Página colaborativa con mi equipo de investigación. Incluye nuestros perfiles y aportes.</p>
+        <p>Página colaborativa creada junto a mi equipo de investigación con nuestros perfiles y aportes.</p>
         <a href="https://reedmamani.github.io/Portada-Grupal/" target="_blank">Ver portafolio</a>
       </div>
-
     </section>
 
-    <section>
+    <section class="fade-scroll" id="contacto">
       <h2>Contacto</h2>
-      <p>📧 29694785@continental.edu.pe</p>
-      <p>🐙 <a href="https://github.com/edgargon1407" target="_blank">Mi perfil en GitHub</a></p>
+      <p><i class="fas fa-envelope"></i> 29694785@continental.edu.pe</p>
+      <p><i class="fab fa-github"></i> <a href="https://github.com/edgargon1407" target="_blank">Mi perfil en GitHub</a></p>
+      <div class="social-icons">
+        <a href="https://github.com/edgargon1407" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="mailto:29694785@continental.edu.pe"><i class="fas fa-envelope"></i></a>
+      </div>
     </section>
 
   </div>
 
   <footer>
-    &copy; 2025 Edgar Alfredo – Página creada con HTML y mucho ❤️
+    &copy; 2025 Edgar Gonzales – Hecho con HTML, CSS y pasión por la tecnología 💻✨
   </footer>
+
+  <!-- Animación Scroll -->
+  <script>
+    const faders = document.querySelectorAll('.fade-scroll');
+    const appearOptions = {
+      threshold: 0.2,
+      rootMargin: "0px 0px -50px 0px"
+    };
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("show");
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  </script>
 
 </body>
 </html>
+
