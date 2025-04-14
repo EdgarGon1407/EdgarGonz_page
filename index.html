@@ -13,8 +13,9 @@
 
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to bottom right, #f0f4f8, #d9e2ec);
-      color: #333;
+      background-color: #000;
+      color: #f1f1f1;
+      overflow-x: hidden;
     }
 
     header {
@@ -22,6 +23,7 @@
       color: white;
       padding: 3rem 1rem;
       text-align: center;
+      animation: fadeInUp 1s ease-in-out;
     }
 
     header h1 {
@@ -41,33 +43,35 @@
 
     section {
       margin-bottom: 3rem;
+      animation: fadeInUp 1s ease-in-out;
     }
 
     h2 {
       font-size: 2rem;
       margin-bottom: 1rem;
-      color: #24292e;
+      color: #ffffff;
       border-left: 5px solid #0366d6;
       padding-left: 10px;
     }
 
     .card {
-      background: white;
+      background: #1a1a1a;
+      color: #f1f1f1;
       padding: 1.5rem;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 12px rgba(255,255,255,0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       margin-bottom: 1.5rem;
     }
 
     .card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      box-shadow: 0 8px 20px rgba(255,255,255,0.15);
     }
 
     .card a {
       text-decoration: none;
-      color: #0366d6;
+      color: #58a6ff;
       font-weight: bold;
     }
 
@@ -78,15 +82,21 @@
     footer {
       text-align: center;
       padding: 1.5rem;
-      background-color: #f7fafc;
+      background-color: #111;
       font-size: 0.9rem;
-      color: #666;
+      color: #aaa;
+      animation: fadeInUp 1s ease-in-out;
     }
 
     .perfil {
       display: flex;
       align-items: center;
       gap: 1.5rem;
+      background-color: #1e1e1e;
+      border: 2px solid #58a6ff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 0 10px rgba(88, 166, 255, 0.3);
     }
 
     .perfil img {
@@ -99,6 +109,7 @@
     .perfil-info p {
       font-size: 1.1rem;
       line-height: 1.6;
+      color: #ccc;
     }
 
     @media (max-width: 600px) {
@@ -107,13 +118,25 @@
         text-align: center;
       }
     }
+
+    /* Animación fadeInUp */
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>¡Hola! Soy [Edgar Alfredo Gonzales Huisa]</h1>
-    <p>Desarrollador | Estudiante | Apasionado por la tecnología</p>
+    <h1>¡Hola! Soy Edgar Alfredo Gonzales Huisa</h1>
+    <p>Desarrollador | Estudiante de Ing. de Sistemas | Apasionado por la tecnología</p>
   </header>
 
   <div class="container">
@@ -152,9 +175,8 @@
   </div>
 
   <footer>
-    &copy; 2025 [Edgar Alfredo] – Página creada con HTML y mucho ❤️
+    &copy; 2025 Edgar Alfredo – Página creada con HTML y mucho ❤️
   </footer>
 
 </body>
 </html>
-
